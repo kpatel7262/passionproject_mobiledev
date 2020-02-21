@@ -1,0 +1,38 @@
+﻿@model List<passionproject_2.Models.Bodytypes>
+
+@{
+    ViewBag.Title = "Car Body Types List";
+}
+
+<h2>List</h2>
+
+@{
+    foreach (var Bodytypes in Model)
+    {
+        
+
+        <table>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="/Bodytypes/Show/@Bodytypes.BodytypeID" style="color:black;font-size:medium;margin-right:200px;">@Bodytypes.BodytypeName</a>
+                    </td>
+                    <td>
+                        <button><a href="/Bodytypes/Update/@Bodytypes.BodytypeID" style="padding:auto;font-size:medium;">Update</a></button>
+                    </td>
+                    <td>
+                        <button><a href="/Bodytypes/Delete/@Bodytypes.BodytypeID" style="padding:auto;font-size:medium;">Delete</a></button>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+
+    }
+
+}
+
+<button><a href="/Bodytypes/Add" style="padding:auto;font-size:medium;">Add</a></button>

@@ -1,0 +1,16 @@
+﻿@model passionproject_2.Models.Bodytypes
+@{
+    ViewBag.Title = "Update";
+}
+
+
+<h2>Update Bodytype</h2>
+<form method="POST" action="/Bodytypes/Update/@Model.BodytypeID">
+    <span>
+        Body Type:
+        <input type="text" name="BodytypeName" id="BodytypeName" value="@Model.BodytypeName"><br />
+    </span>
+
+    <input type="submit" value="Update Bodytype" />
+</form>
+

@@ -1,0 +1,41 @@
+﻿@model passionproject_2.Models.ViewModel.AddCarViewModel
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add new Car</h2>
+
+<div class="navbar">
+    <a class="navlink" href="/Cars/List">Back to List</a>
+</div>
+<form method="POST" action="/Cars/Add">
+    <span>Name</span><input id="CarName" type="text" name="CarName" /></div>
+
+    <span>Brand:</span>
+    <select id="BrandID" type="text" name="BrandID">
+        @{
+            //A rendering loop for presenting a list of Brands
+
+            foreach (var Brands in Model.Brands)
+            {
+                <option value="@Brands.BrandID">@Brands.BrandName</option>
+
+            }
+        }
+    </select>
+    <span>Body Type:</span>
+    <select id="BodytypeID" type="text" name="BodytypeID">
+        @{
+            //A rendering loop for presenting a list of Brands
+
+            foreach (var Bodytypes in Model.Bodytypes)
+            {
+                <option value="@Bodytypes.BodytypeID">@Bodytypes.BodytypeName</option>
+
+            }
+        }
+    </select>
+</form>
+
+    
+

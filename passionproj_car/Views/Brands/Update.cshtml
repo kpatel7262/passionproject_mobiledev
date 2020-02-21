@@ -1,0 +1,14 @@
+﻿@model passionproject_2.Models.Brands
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Brands</h2>
+    <form method="POST" action="/Brands/Update/@Model.BrandID">
+        <span>Brand Name:
+            <input type="text" name="BrandName" id="BrandName" value="@Model.BrandName"><br/>
+        </span>
+        
+            <input type="submit" value="Update Brand" />
+    </form>
+

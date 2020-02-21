@@ -1,0 +1,35 @@
+﻿@model List<passionproject_2.Models.Brands>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Brands</h2>
+
+@{
+    foreach (var Brands in Model)
+    {
+    <table>
+        
+        <tbody>
+            <tr><td>
+            <a href="/Brands/Show/@Brands.BrandID" style="color:black;font-size:medium;margin-right:200px;">@Brands.BrandName</a>
+                </td>
+            <td>
+            <button><a href="/Brands/Update/@Brands.BrandID" style="padding:auto;font-size:medium;">Update</a></button>
+                </td>
+            <td>
+            <button><a href="/Brands/Delete/@Brands.BrandID" style="padding:auto;font-size:medium;">Delete</a></button>
+                </td>
+            </tr>
+
+            
+        </tbody>
+    </table>
+
+    }
+    
+}
+
+<button><a href="/Brands/Add" style="padding:auto;font-size:medium;">Add</a></button>
+

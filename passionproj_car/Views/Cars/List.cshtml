@@ -1,0 +1,21 @@
+﻿@model List<passionproject_2.Models.Cars>
+@{
+    ViewBag.Title = "List";
+}
+
+
+<h2>List of Cars</h2>
+@{
+    foreach (var Cars in Model)
+    {
+        <div>
+            <span style="font-size:medium;">@Cars.CarName</span>
+            <span style="padding:auto;font-size:medium;margin-left100px;">@Cars.Brands.BrandName</span>
+            <span style="padding:auto;font-size:medium;">@Cars.Bodytypes.BodytypeName</span>
+
+            <a href="/Cars/Add/@Cars.CarID" style="padding:auto;font-size:medium;">Add</a>
+            <a href="/Cars/Update/@Cars.CarID" style="padding:auto;font-size:medium;">Update</a>
+            <a href="/Cars/Delete/@Cars.CarID" style="padding:auto;font-size:medium;">Delete</a>
+        </div>
+    }
+}
